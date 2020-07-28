@@ -35,14 +35,14 @@
         <div ref="mainLogo" class="regular-logo">
           <router-link :to="{ name: 'Home'}">
             <v-img
-              alt="McAlpine Free Logo"
+              alt="Cant Logo"
               class="shrink mr-2"
               contain
-              src="@/../public/img/mcalpine-free_logo@2x.png"
+              src="@/../public/img/cant_image.png"
               v-resize="onResize"
               :max-width="windowSize.x - logoMaxSizeBuffer"
-              width="320"
-              height="74"
+              width="300"
+              height="300"
             />
           </router-link>
         </div>
@@ -64,13 +64,6 @@
       >
         <span class="nav-button">About</span>
       </v-btn>
-      <v-btn
-        :to="{ name: 'Contact'}"
-        text
-        class="d-none d-sm-block"
-      >
-        <span class="nav-button">Contact</span>
-      </v-btn>
       <div class="d-none d-md-block right-padding"></div>
     </v-app-bar>
   </div>
@@ -91,32 +84,46 @@ export default class NavBar extends Vue {
     mainLogo: HTMLDivElement;
     animLogo: HTMLDivElement;
   }
+
   @Watch('$route.name')
   onPropertyChanged() {
     this.setupAnimation();
   }
+
   sidebar = false;
+
   menuItems = [
     { title: 'Work', path: '/work' },
     { title: 'About', path: '/about' },
     { title: 'Contact', path: '/contact' },
   ]
+
   windowSize = { x: 0, y: 0 }
+
   private logoMaxSizeBuffer = 80;
+
   private timeline: TimelineMax | undefined;
+
   private requestId: number | null = null;
+
   private triggerOffset = 0;
+
   private duration = 300;
+
   private sceneStart = 0;
+
   private animationComplete = false;
+
   // lifecycle hook
   mounted() {
     this.onResize();
     this.setupAnimation();
   }
+
   private onResize() {
     this.windowSize = { x: window.innerWidth, y: window.innerHeight };
   }
+
   private setupAnimation(): void {
     if (this.animateLogo()) {
       this.timeline = new TimelineMax({
@@ -153,11 +160,13 @@ export default class NavBar extends Vue {
       this.$refs.animLogo.style.display = 'none';
     }
   }
+
   private scrollUpdate() {
     if (!this.requestId) {
       this.requestId = requestAnimationFrame(this.updateAnimation);
     }
   }
+
   private static getStart(): {x: number; y: number; width: number; height: number} {
     const width = window.innerWidth * 0.3 + 60; // +60 for small screens
     const height = width * 0.23;
@@ -167,6 +176,7 @@ export default class NavBar extends Vue {
       x, y, width, height,
     };
   }
+
   private getTarget(): {x: number; y: number; width: number; height: number} {
     const logo = this.$refs.mainLogo;
     const rect = logo.getBoundingClientRect();
@@ -178,9 +188,11 @@ export default class NavBar extends Vue {
     }
     return result;
   }
+
   private animateLogo() {
     return this.$route.name === 'Home';
   }
+
   private updateAnimation() {
     if (this.timeline !== undefined) {
       this.timeline.time(window.pageYOffset + this.triggerOffset);

@@ -1,0 +1,52 @@
+$font-stack-medium: Medium Quasimoda;
+$font-stack: Regular Quasimoda;
+$font-stack-light: Quasimoda;
+$primary-color: #0D223F;
+$primary-color-greyed: #0D223FA8;
+// TODO: put colors in separate file so they can be imported anywhere
+$accent-color: #66c8c7;
+
+.nav-button {
+    font: $font-stack-medium;
+    color: $primary-color;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font:$font-stack-medium;
+    letter-spacing: 0px;
+    color: $primary-color;
+    text-transform: uppercase;
+    opacity: 1;
+    font-size: 28px;
+}
+
+p {
+    font:$font-stack;
+    letter-spacing: 0px;
+    line-height: 1.2em;
+    color: $primary-color;
+    opacity: 1;
+    font-size: 22px;
+}
+
+.footer {
+    font: $font-stack-light;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: $primary-color-greyed;
+    opacity: 1;
+    padding-bottom: 64px;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #0d223f;
+    text-transform: uppercase;
+    opacity: 1;
+    font-family: Quasimoda;
+    font-weight: 300;
+    font-size: 22px;
+  }
