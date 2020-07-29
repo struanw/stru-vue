@@ -4,7 +4,7 @@
     <v-content>
       <router-view/>
     </v-content>
-    <v-footer color="primary" absolute padless flat app>
+    <v-footer color="#fffcde" absolute padless flat app>
       <v-col
         class="text-center footer"
         cols="12"

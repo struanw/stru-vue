@@ -15,7 +15,7 @@
 
     <v-app-bar
       app
-      color="primary"
+      color="#fffcde"
       light
       class="nav-bar"
       extended
@@ -23,7 +23,7 @@
     >
       <div ref="animLogo" class="anim-logo">
         <router-link :to="{ name: 'Home'}">
-          <v-img src="@/../public/img/cant_image.png" />
+              <v-img src="@/../public/img/home/fallingObject.png"/>
         </router-link>
       </div>
       <div class="d-sm-none">
@@ -35,14 +35,14 @@
         <div ref="mainLogo" class="regular-logo">
           <router-link :to="{ name: 'Home'}">
             <v-img
-              alt="Cant Logo"
+              alt="fallingObject"
               class="shrink mr-2"
               contain
-              src="@/../public/img/cant_image.png"
+              src="@/../public/img/home/fallingObject.png"
               v-resize="onResize"
               :max-width="windowSize.x - logoMaxSizeBuffer"
-              width="300"
-              height="300"
+             width="320"
+              height="74"
             />
           </router-link>
         </div>
@@ -95,7 +95,6 @@ export default class NavBar extends Vue {
   menuItems = [
     { title: 'Work', path: '/work' },
     { title: 'About', path: '/about' },
-    { title: 'Contact', path: '/contact' },
   ]
 
   windowSize = { x: 0, y: 0 }
@@ -168,7 +167,7 @@ export default class NavBar extends Vue {
   }
 
   private static getStart(): {x: number; y: number; width: number; height: number} {
-    const width = window.innerWidth * 0.3 + 60; // +60 for small screens
+    const width = window.innerWidth * 0.7 + 60; // +60 for small screens
     const height = width * 0.23;
     const x = window.innerWidth * 0.144;
     const y = (window.innerWidth * 0.3) / 2.2 + 100; // +100 for small screens
@@ -203,10 +202,10 @@ export default class NavBar extends Vue {
 </script>
 <style lang="scss" scoped>
 .nav-bar {
-  padding-top: 16px;
+  padding-top: 14px;
 }
 .left-padding {
-  padding-left: 140px;
+  padding-left: 40px;
 }
 .right-padding {
   padding-right: 140px !important;

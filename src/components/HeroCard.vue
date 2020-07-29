@@ -1,24 +1,8 @@
 <template>
     <div>
-        <v-card
-          light
-          v-bind="width"
-          class="mx-auto"
-          flat
-          >
-            <a :href="href" target="_blank" :is="createLink ? 'a' : 'div'">
               <div>
                 <v-container>
                   <v-row>
-                    <v-col v-if="displayImage && (!imageRight || $vuetify.breakpoint.xsOnly)"
-                      :xs="12" :sm="4" :md="4" :lg="4" :xl="4">
-                      <v-avatar
-                        size="260"
-                        tile
-                      >
-                        <v-img :src="src"></v-img>
-                      </v-avatar>
-                    </v-col>
                     <v-col :xs="12"
                     :sm="8 + noneImageExpand"
                     :md="8 + noneImageExpand"
@@ -39,7 +23,6 @@
                             }"
                         >
                           <div
-                            class="accent"
                             v-bind:class="{'div-on-right': imageRight &&
                               !$vuetify.breakpoint.xsOnly}"
                           />
@@ -51,8 +34,7 @@
                     <v-col v-if="displayImage && (imageRight && ! $vuetify.breakpoint.xsOnly)"
                       :xs="12" :sm="4" :md="4" :lg="4" :xl="4">
                       <v-avatar
-                        size="260"
-                        tile
+                        size="320"
                       >
                         <v-img :src="src"></v-img>
                       </v-avatar>
@@ -125,14 +107,7 @@ export default class HeroCard extends Vue {
 h2 {
   word-break: break-word;
 }
-.accent {
-  width: 73px;
-  height: 11px;
-  background: #66c8c7 0% 0% no-repeat padding-box;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  opacity: 1;
-}
+
 .div-on-right {
   margin-left: auto;
 }

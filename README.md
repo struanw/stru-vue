@@ -1,3 +1,3 @@
 # Stru-Vue
 
-Vue with Typecript potential portfolio
+Potential portfolio built using Vue with Typecript
