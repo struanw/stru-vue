@@ -1,25 +1,24 @@
-$font-stack-medium: Medium Quasimoda;
-$font-stack: Regular Quasimoda;
-$font-stack-light: Quasimoda;
-$primary-color: #0D223F;
-$primary-color-greyed: #0D223FA8;
-// TODO: put colors in separate file so they can be imported anywhere
-$accent-color: #66c8c7;
+$font-stack: eb-garamond, serif;;
+$primary-color: #394989;
+$primary-color-greyed: #4f5fa1;
 
 .nav-button {
-    font: $font-stack-medium;
+    font: $font-stack;
     color: $primary-color;
     font-size: 22px;
     text-transform: uppercase;
 }
 
 h2 {
-    font:$font-stack-medium;
+    font:$font-stack;
     letter-spacing: 0px;
     color: $primary-color;
     text-transform: uppercase;
     opacity: 1;
     font-size: 28px;
+    font-family: eb-garamond, serif;;
+    font-style: normal;
+    font-weight: 400;
 }
 
 p {
@@ -29,15 +28,17 @@ p {
     color: $primary-color;
     opacity: 1;
     font-size: 22px;
+    font-family: eb-garamond, serif;
+    font-style: normal;
 }
 
 .footer {
-    font: $font-stack-light;
+    font: $font-stack;
     font-size: 12px;
     letter-spacing: 0px;
     color: $primary-color-greyed;
     opacity: 1;
-    padding-bottom: 64px;
+    padding-bottom: 12px;
 }
 
 h1 {
@@ -46,7 +47,30 @@ h1 {
     color: #0d223f;
     text-transform: uppercase;
     opacity: 1;
-    font-family: Quasimoda;
-    font-weight: 300;
+    font-family: eb-garamond, serif;
+    font-style: normal;
+    font-weight: 400;
     font-size: 22px;
   }
+
+
+
+//   EB Garamond Regular
+//   font-family: eb-garamond, serif;
+//   font-weight: 400;
+//   font-style: normal;
+  
+//   EB Garamond Italic
+//   font-family: eb-garamond, serif;
+//   font-weight: 400;
+//   font-style: italic;
+  
+//   EB Garamond Bold
+//   font-family: eb-garamond, serif;
+//   font-weight: 700;
+//   font-style: normal;
+  
+//   EB Garamond Bold Italic
+//   font-family: eb-garamond, serif;
+//   font-weight: 700;
+//   font-style: italic;

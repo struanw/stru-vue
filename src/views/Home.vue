@@ -8,10 +8,7 @@
             imageRight=true
             src="/img/home/billmurray.png"
             max-width="966"
-            description="This is an adventure.
-
-make this scroll down and then scroll to the right"
-
+            description="This is an adventure."
 
           />
         </v-col>

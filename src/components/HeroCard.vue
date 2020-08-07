@@ -1,5 +1,11 @@
 <template>
     <div>
+      <v-card
+          light
+          v-bind="width"
+          class="mx-auto"
+          flat
+          >
               <div>
                 <v-container>
                   <v-row>
@@ -26,7 +32,7 @@
                             v-bind:class="{'div-on-right': imageRight &&
                               !$vuetify.breakpoint.xsOnly}"
                           />
-                          <p>{{description}}</p>
+                          <h2>{{description}}</h2>
                         </v-card-subtitle>
                       </div>
                     </v-col>
@@ -42,7 +48,6 @@
                   </v-row>
                 </v-container>
               </div>
-            </a>
           </v-card>
     </div>
 
@@ -118,3 +123,11 @@ h2 {
   text-align: justify;
 }
 </style>
+
+//
+//
+//
+// // ideas to build //
+//
+//
+//  make it scroll down then left etc
