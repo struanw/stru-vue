@@ -1,17 +1,5 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="sidebar" app>
-      <v-list>
-        <v-list-item-group>
-          <v-list-item
-            v-for="item in menuItems"
-            :key="item.title"
-            :to="item.path">
-            <v-list-item-content class="nav-button">{{ item.title }}</v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
 
     <v-app-bar
       app
@@ -25,10 +13,6 @@
         <router-link :to="{ name: 'Home'}">
               <v-img src="@/../public/img/home/fallingObject.png"/>
         </router-link>
-      </div>
-      <div class="d-sm-none">
-        <v-app-bar-nav-icon  @click="sidebar = !sidebar">
-        </v-app-bar-nav-icon>
       </div>
       <div class="d-none d-md-block left-padding"></div>
       <div class="d-flex align-center">
